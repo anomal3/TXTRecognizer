@@ -28,23 +28,24 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.logoPictureBox = new System.Windows.Forms.PictureBox();
-            this.textBoxDescription = new System.Windows.Forms.TextBox();
-            this.labelCompanyName = new System.Windows.Forms.Label();
-            this.labelCopyright = new System.Windows.Forms.Label();
-            this.labelVersion = new System.Windows.Forms.Label();
-            this.labelProductName = new System.Windows.Forms.Label();
-            this.okButton = new System.Windows.Forms.Button();
-            this.hl_emgucv = new System.Windows.Forms.LinkLabel();
-            this.hl_docnet = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.hl_xunit = new System.Windows.Forms.LinkLabel();
+            this.bUpdate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.hl_xunit = new System.Windows.Forms.LinkLabel();
+            this.hl_docnet = new System.Windows.Forms.LinkLabel();
+            this.hl_emgucv = new System.Windows.Forms.LinkLabel();
+            this.okButton = new System.Windows.Forms.Button();
+            this.logoPictureBox = new System.Windows.Forms.PictureBox();
+            this.labelProductName = new System.Windows.Forms.Label();
+            this.labelVersion = new System.Windows.Forms.Label();
+            this.labelCopyright = new System.Windows.Forms.Label();
+            this.labelCompanyName = new System.Windows.Forms.Label();
+            this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel
@@ -73,6 +74,103 @@
             this.tableLayoutPanel.Size = new System.Drawing.Size(487, 443);
             this.tableLayoutPanel.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.bUpdate);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.hl_xunit);
+            this.panel1.Controls.Add(this.hl_docnet);
+            this.panel1.Controls.Add(this.hl_emgucv);
+            this.panel1.Controls.Add(this.okButton);
+            this.panel1.Location = new System.Drawing.Point(163, 273);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(320, 167);
+            this.panel1.TabIndex = 1;
+            // 
+            // bUpdate
+            // 
+            this.bUpdate.Location = new System.Drawing.Point(146, 141);
+            this.bUpdate.Name = "bUpdate";
+            this.bUpdate.Size = new System.Drawing.Size(75, 23);
+            this.bUpdate.TabIndex = 26;
+            this.bUpdate.Text = "&Update";
+            this.bUpdate.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(87, 91);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(230, 35);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "is a free, open source, community-focused unit testing tool for the .NET Framewor" +
+    "k. ";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(86, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(230, 43);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "PDF editing and data extraction library. It is a .NET Standard 2.0 wrapper for PD" +
+    "Fium C++ library that is used by chromium.";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(86, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(230, 31);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Net wrapper to the OpenCV image processing library";
+            // 
+            // hl_xunit
+            // 
+            this.hl_xunit.AutoSize = true;
+            this.hl_xunit.Location = new System.Drawing.Point(4, 91);
+            this.hl_xunit.Name = "hl_xunit";
+            this.hl_xunit.Size = new System.Drawing.Size(58, 14);
+            this.hl_xunit.TabIndex = 1;
+            this.hl_xunit.TabStop = true;
+            this.hl_xunit.Text = "xUnit.net";
+            this.hl_xunit.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.hl_xunit_LinkClicked);
+            // 
+            // hl_docnet
+            // 
+            this.hl_docnet.AutoSize = true;
+            this.hl_docnet.Location = new System.Drawing.Point(3, 48);
+            this.hl_docnet.Name = "hl_docnet";
+            this.hl_docnet.Size = new System.Drawing.Size(76, 14);
+            this.hl_docnet.TabIndex = 1;
+            this.hl_docnet.TabStop = true;
+            this.hl_docnet.Text = "Docnet.Core";
+            this.hl_docnet.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.hl_docnet_LinkClicked);
+            // 
+            // hl_emgucv
+            // 
+            this.hl_emgucv.AutoSize = true;
+            this.hl_emgucv.Location = new System.Drawing.Point(3, 9);
+            this.hl_emgucv.Name = "hl_emgucv";
+            this.hl_emgucv.Size = new System.Drawing.Size(58, 14);
+            this.hl_emgucv.TabIndex = 0;
+            this.hl_emgucv.TabStop = true;
+            this.hl_emgucv.Text = "EMGU CV";
+            this.hl_emgucv.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.hl_emgucv_LinkClicked);
+            // 
+            // okButton
+            // 
+            this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.okButton.Location = new System.Drawing.Point(228, 141);
+            this.okButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.okButton.Name = "okButton";
+            this.okButton.Size = new System.Drawing.Size(88, 23);
+            this.okButton.TabIndex = 24;
+            this.okButton.Text = "&ОК";
+            // 
             // logoPictureBox
             // 
             this.logoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -85,6 +183,54 @@
             this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoPictureBox.TabIndex = 12;
             this.logoPictureBox.TabStop = false;
+            // 
+            // labelProductName
+            // 
+            this.labelProductName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelProductName.Location = new System.Drawing.Point(167, 0);
+            this.labelProductName.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
+            this.labelProductName.MaximumSize = new System.Drawing.Size(0, 18);
+            this.labelProductName.Name = "labelProductName";
+            this.labelProductName.Size = new System.Drawing.Size(316, 18);
+            this.labelProductName.TabIndex = 19;
+            this.labelProductName.Text = "Название продукта";
+            this.labelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelVersion
+            // 
+            this.labelVersion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelVersion.Location = new System.Drawing.Point(167, 44);
+            this.labelVersion.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
+            this.labelVersion.MaximumSize = new System.Drawing.Size(0, 18);
+            this.labelVersion.Name = "labelVersion";
+            this.labelVersion.Size = new System.Drawing.Size(316, 18);
+            this.labelVersion.TabIndex = 0;
+            this.labelVersion.Text = "Версия";
+            this.labelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelCopyright
+            // 
+            this.labelCopyright.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelCopyright.Location = new System.Drawing.Point(167, 88);
+            this.labelCopyright.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
+            this.labelCopyright.MaximumSize = new System.Drawing.Size(0, 18);
+            this.labelCopyright.Name = "labelCopyright";
+            this.labelCopyright.Size = new System.Drawing.Size(316, 18);
+            this.labelCopyright.TabIndex = 21;
+            this.labelCopyright.Text = "Авторские права";
+            this.labelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelCompanyName
+            // 
+            this.labelCompanyName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelCompanyName.Location = new System.Drawing.Point(167, 132);
+            this.labelCompanyName.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
+            this.labelCompanyName.MaximumSize = new System.Drawing.Size(0, 18);
+            this.labelCompanyName.Name = "labelCompanyName";
+            this.labelCompanyName.Size = new System.Drawing.Size(316, 18);
+            this.labelCompanyName.TabIndex = 22;
+            this.labelCompanyName.Text = "Название организации";
+            this.labelCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textBoxDescription
             // 
@@ -99,138 +245,6 @@
             this.textBoxDescription.TabIndex = 23;
             this.textBoxDescription.TabStop = false;
             this.textBoxDescription.Text = "Описание";
-            // 
-            // labelCompanyName
-            // 
-            this.labelCompanyName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCompanyName.Location = new System.Drawing.Point(167, 132);
-            this.labelCompanyName.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
-            this.labelCompanyName.MaximumSize = new System.Drawing.Size(0, 18);
-            this.labelCompanyName.Name = "labelCompanyName";
-            this.labelCompanyName.Size = new System.Drawing.Size(316, 18);
-            this.labelCompanyName.TabIndex = 22;
-            this.labelCompanyName.Text = "Название организации";
-            this.labelCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelCopyright
-            // 
-            this.labelCopyright.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCopyright.Location = new System.Drawing.Point(167, 88);
-            this.labelCopyright.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
-            this.labelCopyright.MaximumSize = new System.Drawing.Size(0, 18);
-            this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(316, 18);
-            this.labelCopyright.TabIndex = 21;
-            this.labelCopyright.Text = "Авторские права";
-            this.labelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelVersion
-            // 
-            this.labelVersion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelVersion.Location = new System.Drawing.Point(167, 44);
-            this.labelVersion.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
-            this.labelVersion.MaximumSize = new System.Drawing.Size(0, 18);
-            this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(316, 18);
-            this.labelVersion.TabIndex = 0;
-            this.labelVersion.Text = "Версия";
-            this.labelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelProductName
-            // 
-            this.labelProductName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelProductName.Location = new System.Drawing.Point(167, 0);
-            this.labelProductName.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
-            this.labelProductName.MaximumSize = new System.Drawing.Size(0, 18);
-            this.labelProductName.Name = "labelProductName";
-            this.labelProductName.Size = new System.Drawing.Size(316, 18);
-            this.labelProductName.TabIndex = 19;
-            this.labelProductName.Text = "Название продукта";
-            this.labelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // okButton
-            // 
-            this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.okButton.Location = new System.Drawing.Point(228, 141);
-            this.okButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(88, 23);
-            this.okButton.TabIndex = 24;
-            this.okButton.Text = "&ОК";
-            // 
-            // hl_emgucv
-            // 
-            this.hl_emgucv.AutoSize = true;
-            this.hl_emgucv.Location = new System.Drawing.Point(3, 9);
-            this.hl_emgucv.Name = "hl_emgucv";
-            this.hl_emgucv.Size = new System.Drawing.Size(58, 14);
-            this.hl_emgucv.TabIndex = 0;
-            this.hl_emgucv.TabStop = true;
-            this.hl_emgucv.Text = "EMGU CV";
-            // 
-            // hl_docnet
-            // 
-            this.hl_docnet.AutoSize = true;
-            this.hl_docnet.Location = new System.Drawing.Point(3, 48);
-            this.hl_docnet.Name = "hl_docnet";
-            this.hl_docnet.Size = new System.Drawing.Size(76, 14);
-            this.hl_docnet.TabIndex = 1;
-            this.hl_docnet.TabStop = true;
-            this.hl_docnet.Text = "Docnet.Core";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.hl_xunit);
-            this.panel1.Controls.Add(this.hl_docnet);
-            this.panel1.Controls.Add(this.hl_emgucv);
-            this.panel1.Controls.Add(this.okButton);
-            this.panel1.Location = new System.Drawing.Point(163, 273);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(320, 167);
-            this.panel1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(86, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 31);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Net wrapper to the OpenCV image processing library";
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(86, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 43);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "PDF editing and data extraction library. It is a .NET Standard 2.0 wrapper for PD" +
-    "Fium C++ library that is used by chromium.";
-            // 
-            // hl_xunit
-            // 
-            this.hl_xunit.AutoSize = true;
-            this.hl_xunit.Location = new System.Drawing.Point(4, 103);
-            this.hl_xunit.Name = "hl_xunit";
-            this.hl_xunit.Size = new System.Drawing.Size(58, 14);
-            this.hl_xunit.TabIndex = 1;
-            this.hl_xunit.TabStop = true;
-            this.hl_xunit.Text = "xUnit.net";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(86, 103);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(230, 35);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "is a free, open source, community-focused unit testing tool for the .NET Framewor" +
-    "k. ";
             // 
             // frmAbout
             // 
@@ -251,9 +265,9 @@
             this.Text = "AboutBox1";
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,5 +289,6 @@
         private Label label2;
         private Label label1;
         private LinkLabel hl_xunit;
+        private Button bUpdate;
     }
 }

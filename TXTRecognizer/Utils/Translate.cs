@@ -13,7 +13,7 @@ namespace TXTRecognizer.Utils
         {
             switch(Settings.Default.lang)
             {
-                case "rus":return rus[line];
+                case "ru":return rus[line];
                 case "us": return eng[line];
                 default : return eng[line];
             }
@@ -40,6 +40,9 @@ namespace TXTRecognizer.Utils
             ["lblDrop"] = "Drag picture here",
             ["DownloadMoreLang"] = "Download more language...",
             ["about"] = "About...",
+            ["error"] = "Error",
+            ["DragLeave"] = "Can you let go",
+            ["Unsupported"] = "Unsupported format",
         };
 
         public static Dictionary<string, string> rus = new Dictionary<string, string>
@@ -63,6 +66,9 @@ namespace TXTRecognizer.Utils
             ["lblDrop"] = "Перетащите картинку сюда",
             ["DownloadMoreLang"] = "Скачать больше языков...",
             ["about"] = "О Программе...",
+            ["error"] = "Ошибка",
+            ["DragLeave"] = "Можете отпускать",
+            ["Unsupported"] = "Неподдерживаемый формат",
         };
     }
 }

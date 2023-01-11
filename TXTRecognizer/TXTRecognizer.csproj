@@ -8,14 +8,35 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Platforms>AnyCPU;x86;x64;ARM64</Platforms>
     <ApplicationIcon>3997574.ico</ApplicationIcon>
-    <AssemblyVersion>1.0.25</AssemblyVersion>
+    <AssemblyVersion>1.0.30</AssemblyVersion>
     <Company>BlueBoxProduction</Company>
     <Authors>Roman Koscheev</Authors>
     <Copyright>Roman Koscheev</Copyright>
     <PackageProjectUrl>https://blueboxproduction.ru</PackageProjectUrl>
     <FileVersion>0.1.0.0</FileVersion>
     <PackageReleaseNotes></PackageReleaseNotes>
-    <Description></Description>
+    <Description>=======EN=======
+A program for text recognition from an image or a pdf file. With the use of the EMGU CV framework.
+Emgu CV is a cross-platform .Net wrapper for OpenCV image processing. Allow calling OpenCV functions from .NET compatible languages. The wrapper can be compiled by Visual Studio and Unity and can run on Windows, Linux, Mac OS, iOS and Android.
+The program uses the docnet library to work with PDF files, using the PDF library, the content is converted into a simple PNG image.
+The program does not qualify for any contests and is provided as is, without any warranties.
+The program was written for informational purposes in order to study the EMGU CV library a little.
+In the future, perhaps the program will be updated and acquire the MVC pattern.
+All libraries are open source and free, as a developer, I just put them together and merged them.
+If you decide to thank me, make it Star on Github, if financially, do it through yoomoney
+41001432771966
+
+=======RU=======
+Программа для распознавания текста с картинки или pdf файла. С примененеием фреймворка EMGU CV.
+Emgu CV — это кроссплатформенная оболочка .Net дляобработки изображений OpenCV . Разрешение вызова функций OpenCV из языков, совместимых с .NET. Враппер может быть скомпилирован Visual Studio и Unity, может работать на Windows, Linux, Mac OS, iOS и Android.
+В программе применяется библиотека docnet для работы с PDF файлами, с помощью библиотеки PDF содержимое переводится в простой PNG снимок.
+Программа не претендует на какие либо конкурсы и предоставляется как есть, без каких либо гарантий.
+Программа была написана в ознакомительных целях, чтобы немного изучить библиотеку EMGU CV.
+В дальнейшем, возможно программа будет обновляться и обзаведётся паттерном MVC.
+Все библиотеки в открытом доступе и бесплатны, я как разработчик, лишь собрал их воедино и объеденил.
+Если Вы решите отблагодарить меня, сделайте это Star на Github, если материально, сделайте это через yoomoney
+41001432771966
+</Description>
   </PropertyGroup>
 
   <ItemGroup>

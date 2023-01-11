@@ -25,7 +25,7 @@ namespace TXTRecognizer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("us")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ru")]
         public string lang {
             get {
                 return ((string)(this["lang"]));

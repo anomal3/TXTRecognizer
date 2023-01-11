@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TXTRecognizer.Utils;
 
 namespace TXTRecognizer
 {
@@ -20,6 +21,8 @@ namespace TXTRecognizer
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
             this.textBoxDescription.Text = AssemblyDescription;
+
+            bUpdate.Click += (s, e) => { Tools.OpenUrl("https://github.com/anomal3/TXTRecognizer/releases"); };
         }
 
         #region Методы доступа к атрибутам сборки
@@ -101,5 +104,16 @@ namespace TXTRecognizer
             }
         }
         #endregion
+
+        private void hl_emgucv_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        => Tools.OpenUrl("https://www.emgu.com/wiki/index.php/Main_Page");
+
+        private void hl_docnet_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+         => Tools.OpenUrl("https://github.com/GowenGit/docnet");
+
+        private void hl_xunit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+            =>Tools.OpenUrl("https://github.com/xunit/xunit");
+        
+        
     }
 }

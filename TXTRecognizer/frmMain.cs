@@ -88,6 +88,7 @@ namespace TXTRecognizer
             this.EngRec = new System.Windows.Forms.ToolStripMenuItem();
             this.KazRec = new System.Windows.Forms.ToolStripMenuItem();
             this.DownloadMoreLang = new System.Windows.Forms.ToolStripMenuItem();
+            this.about = new System.Windows.Forms.ToolStripMenuItem();
             this.tbTextRec = new System.Windows.Forms.TextBox();
             this.panelPic = new System.Windows.Forms.Panel();
             this.lblDrop = new System.Windows.Forms.Label();
@@ -95,7 +96,6 @@ namespace TXTRecognizer
             this.ofd = new System.Windows.Forms.OpenFileDialog();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panTool = new System.Windows.Forms.Panel();
-            this.about = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panelPic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
@@ -118,7 +118,7 @@ namespace TXTRecognizer
             this.about});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(564, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(444, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -191,7 +191,7 @@ namespace TXTRecognizer
             // 
             this.RuLang.Image = global::TXTRecognizer.Properties.Resources.flag_russia1;
             this.RuLang.Name = "RuLang";
-            this.RuLang.Size = new System.Drawing.Size(119, 22);
+            this.RuLang.Size = new System.Drawing.Size(180, 22);
             this.RuLang.Text = "Русский";
             this.RuLang.Click += new System.EventHandler(this.RuLang_Click);
             // 
@@ -199,7 +199,7 @@ namespace TXTRecognizer
             // 
             this.UsLang.Image = global::TXTRecognizer.Properties.Resources.flag_usa1;
             this.UsLang.Name = "UsLang";
-            this.UsLang.Size = new System.Drawing.Size(119, 22);
+            this.UsLang.Size = new System.Drawing.Size(180, 22);
             this.UsLang.Text = "English";
             this.UsLang.Click += new System.EventHandler(this.UsLang_Click);
             // 
@@ -225,6 +225,7 @@ namespace TXTRecognizer
             // EngRec
             // 
             this.EngRec.CheckOnClick = true;
+            this.EngRec.Enabled = false;
             this.EngRec.Image = global::TXTRecognizer.Properties.Resources.flag_usa1;
             this.EngRec.Name = "EngRec";
             this.EngRec.Size = new System.Drawing.Size(219, 22);
@@ -233,6 +234,7 @@ namespace TXTRecognizer
             // KazRec
             // 
             this.KazRec.CheckOnClick = true;
+            this.KazRec.Enabled = false;
             this.KazRec.Image = global::TXTRecognizer.Properties.Resources.flag_kazakhstan;
             this.KazRec.Name = "KazRec";
             this.KazRec.Size = new System.Drawing.Size(219, 22);
@@ -243,6 +245,12 @@ namespace TXTRecognizer
             this.DownloadMoreLang.Name = "DownloadMoreLang";
             this.DownloadMoreLang.Size = new System.Drawing.Size(219, 22);
             this.DownloadMoreLang.Text = "Скачать больше языков...";
+            // 
+            // about
+            // 
+            this.about.Name = "about";
+            this.about.Size = new System.Drawing.Size(107, 20);
+            this.about.Text = "О Программе...";
             // 
             // tbTextRec
             // 
@@ -325,12 +333,6 @@ namespace TXTRecognizer
             this.panTool.Size = new System.Drawing.Size(1022, 26);
             this.panTool.TabIndex = 2;
             // 
-            // about
-            // 
-            this.about.Name = "about";
-            this.about.Size = new System.Drawing.Size(107, 20);
-            this.about.Text = "О Программе...";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -340,7 +342,7 @@ namespace TXTRecognizer
             this.Controls.Add(this.splitContainer1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
-            this.Text = "Распознователь текста с картинки";
+            this.Text = "Get text from image...";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panelPic.ResumeLayout(false);
@@ -368,14 +370,14 @@ namespace TXTRecognizer
                 _filePath = ofd.FileName;
                 pic.Image = Image.FromFile(_filePath);
             }
-            else MessageBox.Show("Не выбрано изображение", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else MessageBox.Show(Translate.Translation("no_img_select"), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void распознатьТекстToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(_filePath)) throw new Exception("Картнка не выбрана");
+                if (string.IsNullOrWhiteSpace(_filePath)) throw new Exception(Translate.Translation("no_img_select"));
 
                 Tesseract tesseract = new Tesseract(Path.Combine(Environment.CurrentDirectory, "Assets"), _lang, OcrEngineMode.TesseractLstmCombined);
                 //tesseract.SetVariable("tessedit_char_whitelist", "ABCDEFGHIJKLMNOPQRSTUVWXYZ-1234567890");
@@ -389,7 +391,7 @@ namespace TXTRecognizer
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, Translate.Translation("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -401,7 +403,7 @@ namespace TXTRecognizer
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
                 e.Effect = DragDropEffects.Copy;
-                lblDrop.Text = "Можете отпустить";
+                lblDrop.Text = Translate.Translation("DragLeave");
             }
         }
 
@@ -428,7 +430,7 @@ namespace TXTRecognizer
                     break;
 
                 default:
-                    MessageBox.Show("Неподдерживаемый формат", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(Translate.Translation("Unsupported"), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
             }
 
@@ -484,12 +486,12 @@ namespace TXTRecognizer
 
         private void RuLang_Click(object sender, EventArgs e)
         {
-            Settings.Default.lang = "ru"; TranslateConstrols();
+            Settings.Default.lang = "ru"; TranslateConstrols(); Settings.Default.Save();
         }
 
         private void UsLang_Click(object sender, EventArgs e)
         {
-            Settings.Default.lang = "us"; TranslateConstrols();
+            Settings.Default.lang = "us"; TranslateConstrols(); Settings.Default.Save();
         }
 
         void TranslateConstrols()
